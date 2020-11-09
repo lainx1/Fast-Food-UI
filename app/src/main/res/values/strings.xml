@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">FastFoodAndExtremeDelivery</string>
+
+    <string name="card_title_1" formatted="false">Best Food &amp; extreme delivery.</string>
+    <string name="card_title_2" formatted="false">Your food at the moment.</string>
+    <string name="card_title_3" formatted="false">Always on time</string>
+
+    <string name="card_content_1" formatted="false">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</string>
+    <string name="card_content_2" formatted="false">Proin ut est erat. Suspendisse congue libero.</string>
+    <string name="card_content_3" formatted="false">Maecenas hendrerit tortor quis ex dapibus, ac tincidunt tellus hendrerit.</string>
+
+    <string name="button_next">Next</string>
+
+</resources>

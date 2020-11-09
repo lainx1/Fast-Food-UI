@@ -1,0 +1,30 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Theme.FastFoodAndExtremeDelivery" parent="Theme.MaterialComponents.DayNight.DarkActionBar">
+        <!-- Primary brand color. -->
+        <item name="colorPrimary">@color/purple_200</item>
+        <item name="colorPrimaryVariant">@color/purple_700</item>
+        <item name="colorOnPrimary">@color/black</item>
+        <!-- Secondary brand color. -->
+        <item name="colorSecondary">@color/teal_200</item>
+        <item name="colorSecondaryVariant">@color/teal_200</item>
+        <item name="colorOnSecondary">@color/black</item>
+        <!-- Status bar color. -->
+        <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimaryVariant</item>
+
+        <!--Material shape attributes-->
+        <item name="shapeAppearanceSmallComponent">@style/ShapeAppearance.MyTheme.SmallComponent</item>
+
+        <!-- Typo. -->
+        <item name="textAppearanceHeadline1">@style/TextAppearance.FastFoodAndExtremeDelivery.Headline1</item>
+    </style>
+
+    <style name="Theme.FastFoodAndExtremeDelivery.Text.Title" parent="TextAppearance.MaterialComponents.Headline4">
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="Theme.FastFoodAndExtremeDelivery.Card.Level.One" parent="CardView.Dark">
+        <item name="cardBackgroundColor">?attr/firstLevelCardColor</item>
+    </style>
+
+</resources>

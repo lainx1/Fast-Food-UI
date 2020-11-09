@@ -1,0 +1,61 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Theme.FastFoodAndExtremeDelivery" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <!-- Primary brand color. -->
+        <item name="colorPrimary">@color/purple_500</item>
+        <item name="colorPrimaryVariant">@color/surface</item>
+        <item name="colorOnPrimary">@color/white</item>
+        <!-- Secondary brand color. -->
+        <item name="colorSecondary">@color/teal_200</item>
+        <item name="colorSecondaryVariant">@color/teal_700</item>
+        <item name="colorOnSecondary">@color/black</item>
+
+        <!-- Color surface -->
+        <item name="colorSurface">@color/surface</item>
+
+        <!-- Card levels. -->
+        <item name="firstLevelCardColor">@color/white</item>
+        <item name="secondLevelCardColor">@color/card_second_level</item>
+        <item name="thirdLevelCardColor">@color/card_third_level</item>
+
+
+        <!-- Status bar color. -->
+        <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimaryVariant</item>
+
+        <!--Material shape attributes-->
+        <item name="shapeAppearanceSmallComponent">@style/ShapeAppearance.MyTheme.SmallComponent</item>
+
+        <!-- Typo. -->
+        <item name="textAppearanceHeadline1">@style/TextAppearance.FastFoodAndExtremeDelivery.Headline1</item>
+    </style>
+
+    <style name="Theme.FastFoodAndExtremeDelivery.Text.Title" parent="TextAppearance.MaterialComponents.Headline4">
+        <item name="android:textStyle">bold</item>
+    </style>
+
+
+    <!-- Many Level Card -->
+    <style name="Theme.FastFoodAndExtremeDelivery.Card.Level.One" parent="CardView.Light">
+        <item name="cardBackgroundColor">?attr/firstLevelCardColor</item>
+        <item name="cardElevation">5dp</item>
+    </style>
+
+    <style name="Theme.FastFoodAndExtremeDelivery.Card.Level.Two" parent="CardView.Light">
+        <item name="cardBackgroundColor">?attr/secondLevelCardColor</item>
+    </style>
+
+    <style name="Theme.FastFoodAndExtremeDelivery.Card.Level.Three" parent="CardView.Light">
+        <item name="cardBackgroundColor">?attr/thirdLevelCardColor</item>
+    </style>
+
+    <!-- Bottom Navigation -->
+    <style name="Theme.FastFoodAndExtremeDelivery.Card.Navigator" parent="Widget.MaterialComponents.BottomNavigationView">
+        <item name="background">@drawable/card_bottom_navigation</item>
+        <item name="backgroundTint">?attr/firstLevelCardColor</item>
+    </style>
+
+    <!-- Point Button -->
+    <style name="Theme.FastFoodAndExtremeDelivery.Card.Navigator.Button" parent="Widget.AppCompat.ImageButton">
+        <item name="android:background">@drawable/point_button_selector</item>
+    </style>
+</resources>

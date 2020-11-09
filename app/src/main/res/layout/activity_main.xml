@@ -1,0 +1,299 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:background="?attr/colorSurface">
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/mainMiddleVerticalGL"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent=".5"/>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/vegetableHorizontalGL"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent=".25"/>
+
+    <!-- Apio -->
+    <ImageView
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:src="@drawable/apio"
+        android:layout_marginRight="40dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/vegetableHorizontalGL"/>
+
+    <!-- Carrot -->
+    <ImageView
+        android:layout_marginLeft="20dp"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:src="@drawable/carrot"
+        android:rotation="55"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/vegetableHorizontalGL"
+        app:layout_constraintBottom_toTopOf="@id/topThirdHorizontalGL"/>
+
+    <!-- Tomatoe -->
+    <ImageView
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:src="@drawable/tomatoe"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/vegetableHorizontalGL"
+        app:layout_constraintBottom_toTopOf="@id/topThirdHorizontalGL"/>
+
+    <!-- Lottie -->
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/loader"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:lottie_autoPlay="true"
+        app:lottie_loop="true"
+        app:lottie_fileName="runing_sushi.json"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginBottom="10dp"
+        app:layout_constraintBottom_toTopOf="@+id/topThirdHorizontalGL"/>
+
+
+    <!-- Third level card -->
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/topThirdHorizontalGL"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent=".51"/>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/leftThirdVerticalGL"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent=".25"/>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/rightThirdVerticalGL"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent=".75"/>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/bottomThirdHorizontalGL"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent=".91"/>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/thirdCV"
+        app:cardCornerRadius="20dp"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintTop_toBottomOf="@id/topThirdHorizontalGL"
+        app:layout_constraintBottom_toTopOf="@id/bottomThirdHorizontalGL"
+        app:layout_constraintEnd_toStartOf="@id/rightThirdVerticalGL"
+        app:layout_constraintStart_toEndOf="@id/leftThirdVerticalGL"
+        style="@style/Theme.FastFoodAndExtremeDelivery.Card.Level.Three"
+        />
+
+
+    <!-- Second level card -->
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/topSecondaryHorizontalGL"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent=".53"/>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/leftSecondaryVerticalGL"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent=".20"/>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/rightSecondaryVerticalGL"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent=".80"/>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/bottomSecondaryHorizontalGL"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent=".93"/>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/secondCV"
+        app:cardCornerRadius="20dp"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintTop_toBottomOf="@id/topSecondaryHorizontalGL"
+        app:layout_constraintBottom_toTopOf="@id/bottomSecondaryHorizontalGL"
+        app:layout_constraintEnd_toStartOf="@id/rightSecondaryVerticalGL"
+        app:layout_constraintStart_toEndOf="@id/leftSecondaryVerticalGL"
+        style="@style/Theme.FastFoodAndExtremeDelivery.Card.Level.Two"
+        />
+
+    <!-- First level card -->
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/topMainHorizontalGL"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent=".55"/>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/leftMainVerticalGL"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent=".15" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/rightMainVerticalGL"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent=".85"/>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/bottomMainHorizontalGL"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent=".95"/>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/mainCV"
+        app:cardCornerRadius="20dp"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:contentPadding="10dp"
+        app:layout_constraintTop_toBottomOf="@id/topMainHorizontalGL"
+        app:layout_constraintBottom_toTopOf="@id/bottomMainHorizontalGL"
+        app:layout_constraintEnd_toStartOf="@id/rightMainVerticalGL"
+        app:layout_constraintStart_toEndOf="@id/leftMainVerticalGL"
+        style="@style/Theme.FastFoodAndExtremeDelivery.Card.Level.One"
+        >
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/middleVerticalGL"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                app:layout_constraintGuide_percent="0.5"/>
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/rightVerticalGL"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                app:layout_constraintGuide_percent="0.7"/>
+
+            <TextView
+                android:id="@+id/cardTitleTV"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toTopOf="@+id/contentTextHorizontalGL"
+                app:layout_constraintEnd_toStartOf="@id/rightVerticalGL"
+                app:layout_constraintStart_toStartOf="parent"
+                style="@style/Theme.FastFoodAndExtremeDelivery.Text.Title"
+                android:textColor="@color/black"
+                android:gravity="center_vertical"
+                android:text="@string/card_title_1"/>
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/contentTextHorizontalGL"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                app:layout_constraintGuide_percent="0.5"/>
+
+            <TextView
+                android:id="@+id/cardContentTV"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/rightVerticalGL"
+                app:layout_constraintTop_toBottomOf="@+id/contentTextHorizontalGL"
+                app:layout_constraintBottom_toTopOf="@+id/bottomControllerTopHorizontalGL"
+                android:text="@string/card_content_1"
+                android:gravity="center_vertical"
+                />
+
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/bottomControllerTopHorizontalGL"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                app:layout_constraintGuide_percent=".75"/>
+
+            <LinearLayout
+                android:layout_width="139dp"
+                android:layout_height="82dp"
+                android:gravity="center"
+                android:orientation="horizontal"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@id/middleVerticalGL"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@id/bottomControllerTopHorizontalGL">
+
+                <ImageView
+                    android:id="@+id/firstStepIB"
+                    style="@style/Theme.FastFoodAndExtremeDelivery.Card.Navigator.Button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="10dp"
+                    android:tag="0" />
+
+                <ImageView
+                    android:id="@+id/secondStepIB"
+                    style="@style/Theme.FastFoodAndExtremeDelivery.Card.Navigator.Button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="10dp"
+                    android:tag="1" />
+
+                <ImageView
+                    android:id="@+id/thirdStepIB"
+                    style="@style/Theme.FastFoodAndExtremeDelivery.Card.Navigator.Button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:tag="2" />
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/nextBtn"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                app:layout_constraintTop_toTopOf="@id/bottomControllerTopHorizontalGL"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:text="@string/button_next"
+                app:layout_constraintStart_toEndOf="@id/middleVerticalGL"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--Multi level cards-->
+    <attr name="firstLevelCardColor" format="color"/>
+    <attr name="secondLevelCardColor" format="color"/>
+    <attr name="thirdLevelCardColor" format="color"/>
+    <attr name="colorSurface" format="color"/>
+
+</resources>
